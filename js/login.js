@@ -18,8 +18,8 @@ $(function(){
         //     console.log(err);
         // })
         let res = await axios.post("/user/login",{account,password})
-        console.log(res.data.code);
-        if(parseInt(res.data.code)=== 0){
+        console.log(res);
+        if(parseInt(res.code)=== 0){
             alert("登陆成功")
             window.location.href="index.html"
             return ;
