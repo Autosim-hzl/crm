@@ -10,7 +10,7 @@ axios.defaults.transformRequest = function(data){
     }
     return result.substring(1);
 }
-//配置响应拦截器,使响应回来的数据里面只有data 没有其他,
+//配置响应拦截器,使响应回来的数据里面只有data 
 axios.interceptors.response.use(response=>{
     return response.data;
 },reason=>{
