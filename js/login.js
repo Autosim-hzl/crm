@@ -40,7 +40,7 @@ $(function(){
         if(parseInt(res.code)=== 0){
             alert("登陆成功")
             //登陆成功后我们发生跳转，跳转到主页面，因为浏览器的缘故，所以我们在location之前加上一个window
-            window.location.href="index.html"
+            window.location.href="./index.html"
             return ;//结束我们的函数
         }
        else{

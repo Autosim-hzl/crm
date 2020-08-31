@@ -60,10 +60,10 @@ function _each(obj, callback, context = window) {
  * 缓存部门信息 
  */
 async function queryDepart() {
-	let result,
+	let result,//这里的result的值是underfined
 		department = localStorage.getItem('department');
 	if (department) {
-		department = JSON.parse(department);
+		department = JSON.parse(department);//json串转成json对象
 		if (new Date().getTime() - department.time <= 86400000) {
 			return department.data;
 		}
@@ -73,7 +73,7 @@ async function queryDepart() {
 		time: new Date().getTime(),
 		data: result
 	}));
-	return result;
+	return result;//用async声明的函数，返回值肯定是一个promise对象，return +非promise对象的数据data，相当于return promise.reslove(data),会对其进行立即封装
 }
 
 /*
